@@ -1,0 +1,37 @@
+{
+    "manifest_version": 2,
+
+    "name": "RALLY MAILER",
+    "description": "Share Artifacts in Rally lightning fast.",
+    "version": "1.2",
+
+    "permissions": [
+        "tabs",
+        "https://rally1.rallydev.com/*",
+        "notifications"
+    ],
+
+    "icons": {
+        "16": "img/icon_16.png",
+        "48": "img/icon_48.png",
+        "128": "img/icon_128.png"
+    },
+
+    "page_action": {
+        "default_icon": "img/icon_16.png",
+        "default_title": "RALLY MAILER",
+        "default_popup": "popup.html"
+    },
+
+    "content_scripts": [
+        {
+            "matches": [ "https://rally1.rallydev.com/*" ],
+            "js": ["rallyMailer_cs.js", "jquery-2.1.4.js"]
+        }
+    ],
+
+    "background": {
+        "scripts": [ "eventPage.js" ],
+        "persistent": false
+    }
+}

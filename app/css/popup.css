@@ -1,0 +1,66 @@
+﻿body {
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    min-width: 450px;
+    overflow-x: hidden;
+}
+
+#appHeader {
+    margin: 0;
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+
+.btn-action {
+    position: absolute;
+    top: 77px;
+    right: 35px;
+    z-index: 999;
+}
+
+#artifactsTableBody td {
+    padding: 5px 5px;
+}
+
+.logo {
+    width: 3.3rem;
+    margin-top: 3px;
+}
+.logo-mailer {
+    font-weight: 200;
+}
+
+.logo-rally {
+    font-weight: 700;
+}
+
+.artifacts-header {
+    padding-right: 15px;
+}
+
+.main-content {
+    margin-top: 0.7rem;
+}
+
+#copiedBadge.badge.copied {
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: #fff;
+    background-color: #4CAF50;
+    border-radius: 2px;
+    right: inherit;
+    position: inherit;
+}
+#copiedBadge.badge.copied:after {
+    content: 'COPIED';
+}
+
+.instruction-sub-text {
+    font-size: 1rem;
+    padding-top: 15px;
+}
+
+.btn-action i.material-icons {
+    font-size: 2.5rem;
+}
+
