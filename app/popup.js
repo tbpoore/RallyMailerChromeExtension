@@ -24,13 +24,13 @@ var copyHelper = {
 var actions = {
     getSelectedArtifacts: function() {
         chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-            chrome.tabs.sendMessage(tabs[0].id, { action: "getSelectedArtifacts" });
+            chrome.tabs.sendMessage(tabs[0].id, { action: 'getSelectedArtifacts' });
         });
     },
 
     sendEmail: function() {
         chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-            chrome.tabs.sendMessage(tabs[0].id, { action: "sendEmail" });
+            chrome.tabs.sendMessage(tabs[0].id, { action: 'sendEmail' });
             window.close();
         });
     },
@@ -134,7 +134,7 @@ $(function () {
         var succeeded = actions.copyToClipboard();
 
         if (succeeded) {
-            $('#copiedBadge').velocity({ opacity: 1 }, { display: "block" });
+            $('#copiedBadge').velocity({ opacity: 1 }, { display: 'block' });
             activateEmailAction();
         }
 
@@ -142,7 +142,7 @@ $(function () {
 
     chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 
-        if (request.action == "showSelectedArtifacts") {
+        if (request.action === 'showSelectedArtifacts') {
 
             /* When no artifacts are checked in rally show no artifacts message */
             if (!request.artifacts || request.artifacts.length === 0) {

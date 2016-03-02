@@ -1,5 +1,5 @@
 ﻿chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-    if (request.action == "getSelectedArtifacts") {
+    if (request.action === 'getSelectedArtifacts') {
         var activeArtifactOnly = false;
         var selectedArtifacts = $('.x4-grid-row-selected');
 
@@ -35,16 +35,16 @@
         }
 
         chrome.runtime.sendMessage({
-            action: "showSelectedArtifacts",
+            action: 'showSelectedArtifacts',
             artifacts: artifactsArray,
             activeArtifactOnly: activeArtifactOnly
         });
     }
 
 
-    if (request.action == "sendEmail") {
+    if (request.action === 'sendEmail') {
         document.location.href = 'mailto:';
     }
 });
 
-chrome.runtime.sendMessage({ action: "show" });
+chrome.runtime.sendMessage({ action: 'show' });
