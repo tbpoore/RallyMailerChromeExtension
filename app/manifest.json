@@ -24,10 +24,10 @@
     },
 
     "content_scripts": [
-        {
-            "matches": [ "https://rally1.rallydev.com/*" ],
-            "js": ["rallyMailer_cs.js", "jquery-2.1.4.js"]
-        }
+      {
+        "matches": [ "https://rally1.rallydev.com/*" ],
+        "js": [ "jquery-2.1.4.js", "rallyMailer_cs.js" ]
+      }
     ],
 
     "background": {
