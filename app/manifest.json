@@ -3,12 +3,11 @@
 
     "name": "RALLY MAILER",
     "description": "Share Artifacts in Rally lightning fast.",
-    "version": "1.2",
+    "version": "1.4",
 
     "permissions": [
         "tabs",
-        "https://rally1.rallydev.com/*",
-        "notifications"
+        "https://rally1.rallydev.com/*"
     ],
 
     "icons": {
@@ -26,7 +25,7 @@
     "content_scripts": [
       {
         "matches": [ "https://rally1.rallydev.com/*" ],
-        "js": [ "jquery-2.1.4.js", "rallyMailer_cs.js" ]
+        "js": [ "jquery-2.1.4.min.js", "rallyMailer_cs.js" ]
       }
     ],
 
